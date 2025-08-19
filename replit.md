@@ -25,8 +25,10 @@ Preferred communication style: Simple, everyday language.
 - **Framework**: Express.js with TypeScript running on Node.js
 - **Development Setup**: Custom Vite integration for hot module replacement in development
 - **API Structure**: RESTful endpoints with proper error handling and request/response logging
-- **Storage Layer**: Abstracted storage interface with in-memory implementation (MemStorage class)
+- **Storage Layer**: PostgreSQL database with Drizzle ORM using DatabaseStorage implementation
+- **Database**: PostgreSQL via Neon serverless with persistent email storage and real-time signup counting
 - **Validation**: Zod schemas shared between frontend and backend for consistent data validation
+- **Data Export**: CSV export functionality for waitlist data management
 
 ### Database Schema Design
 - **ORM**: Drizzle ORM configured for PostgreSQL with type-safe database operations

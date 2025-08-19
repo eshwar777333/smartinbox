@@ -53,6 +53,40 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Admin endpoint to view all signups (for testing purposes)
+  app.get("/api/admin/signups", async (req, res) => {
+    try {
+      const signups = await storage.getAllSignups();
+      res.json({ signups, count: signups.length });
+    } catch (error) {
+      console.error("Error getting signups:", error);
+      res.status(500).json({ message: "Failed to get signups" });
+    }
+  });
+
+  // Export signups to CSV format (for Excel)
+  app.get("/api/admin/export-csv", async (req, res) => {
+    try {
+      const signups = await storage.getAllSignups();
+      
+      // Create CSV content
+      const csvHeaders = "Email,Signup Date,ID";
+      const csvRows = signups.map(signup => 
+        `"${signup.email}","${signup.createdAt?.toISOString() || ''}","${signup.id}"`
+      );
+      const csvContent = [csvHeaders, ...csvRows].join('\n');
+      
+      // Set headers for CSV download
+      res.setHeader('Content-Type', 'text/csv');
+      res.setHeader('Content-Disposition', `attachment; filename="smart-inbox-waitlist-${new Date().toISOString().split('T')[0]}.csv"`);
+      
+      res.send(csvContent);
+    } catch (error) {
+      console.error("Error exporting CSV:", error);
+      res.status(500).json({ message: "Failed to export CSV" });
+    }
+  });
+
   const httpServer = createServer(app);
   return httpServer;
 }
