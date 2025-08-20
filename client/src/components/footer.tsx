@@ -1,5 +1,6 @@
 import { Inbox } from "lucide-react";
-import { FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6"; // For the X (Twitter) icon
+import { FaGithub, FaReddit } from "react-icons/fa";
 
 export function Footer() {
   return (
@@ -32,11 +33,13 @@ export function Footer() {
           
           {/* Social Links */}
           <div className="flex items-center space-x-4">
-            <a href="https://x.com/" className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-brand-blue hover:text-white transition-all duration-200" data-testid="link-twitter">
-              <FaTwitter />
-            </a>
-            <a href="https://www.linkedin.com/" className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-brand-blue hover:text-white transition-all duration-200" data-testid="link-linkedin">
-              <FaLinkedin />
+              {/* X (Twitter) */}
+  <a href="https://x.com/" 
+    className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-brand-blue hover:text-white transition-all duration-200" data-testid="link-twitter">
+    <FaXTwitter />
+  </a>
+            <a href="https://www.reddit.com/user/Wonderful-Reality99/submitted/" className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-brand-blue hover:text-white transition-all duration-200" data-testid="link-linkedin">
+              <FaReddit />
             </a>
             <a href="https://github.com/" className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-brand-blue hover:text-white transition-all duration-200" data-testid="link-github">
               <FaGithub />

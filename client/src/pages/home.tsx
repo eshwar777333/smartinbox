@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/navbar";
 import { HeroSection } from "@/components/hero-section";
+import { ProductPreview } from "@/components/product-preview";
 import { FeaturesSection } from "@/components/features-section";
 import { LaunchingSoon } from "@/components/launching-soon";
 import { Footer } from "@/components/footer";
@@ -11,6 +12,7 @@ export default function Home() {
       <meta name="description" content="AI-powered email cleanup. Reach Inbox Zero effortlessly. Join our waitlist for early access and get free Pro access for early users." />
       <Navbar />
       <HeroSection />
+      <ProductPreview />
       <FeaturesSection />
       <LaunchingSoon />
       <Footer />
