@@ -32,13 +32,13 @@ export function Footer() {
           
           {/* Social Links */}
           <div className="flex items-center space-x-4">
-            <a href="#" className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-brand-blue hover:text-white transition-all duration-200" data-testid="link-twitter">
+            <a href="https://x.com/" className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-brand-blue hover:text-white transition-all duration-200" data-testid="link-twitter">
               <FaTwitter />
             </a>
-            <a href="#" className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-brand-blue hover:text-white transition-all duration-200" data-testid="link-linkedin">
+            <a href="https://www.linkedin.com/" className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-brand-blue hover:text-white transition-all duration-200" data-testid="link-linkedin">
               <FaLinkedin />
             </a>
-            <a href="#" className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-brand-blue hover:text-white transition-all duration-200" data-testid="link-github">
+            <a href="https://github.com/" className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-brand-blue hover:text-white transition-all duration-200" data-testid="link-github">
               <FaGithub />
             </a>
           </div>
@@ -46,7 +46,7 @@ export function Footer() {
         
         <div className="mt-8 pt-8 border-t border-gray-100 text-center">
           <p className="text-gray-500 text-sm">
-            © 2024 Smart Inbox. All rights reserved. Made with ❤️ for productivity enthusiasts.
+            © 2025 Smart Inbox. All rights reserved. Made with ❤️ for productivity enthusiasts.
           </p>
         </div>
       </div>

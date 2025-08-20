@@ -19,13 +19,13 @@ export function LaunchingSoon() {
         </h2>
         <p className="text-xl text-gray-300 mb-10 leading-relaxed">
           Join our exclusive waitlist and get early access to revolutionary email management. 
-          Plus, early users get free Pro access for life!
+          Plus, early users get free Pro access!
         </p>
         
         {/* Call to Action */}
         <button 
           onClick={scrollToSignup}
-          className="bg-gradient-to-r from-brand-blue to-brand-purple text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
+          className="inline-flex items-center bg-gradient-to-r from-brand-blue to-brand-purple text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
           data-testid="button-join-waitlist-cta"
         >
           <Mail className="mr-2" size={18} />
